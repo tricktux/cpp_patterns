@@ -21,29 +21,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 
-struct Journal {
-  std::string title;
-  std::vector<std::string> entries;
-
-  explicit Journal(const std::string &title) : title(title) {
-    entries.reserve(32);
-  }
-
-  void add_entry(const std::string &entry) {
-	  if (entry.empty())
-		  return;
-
-	  static int count = 1;
-	  entries.push_back(std::to_string(count++) + ": " + entry);
-  }
-
-  void print_entries() {
-	  for (const std::string &entry : entries) {
-		  std::cout << entry << '\n';
-	  }
-  }
-};
+#include "main.hpp"
 
 int main(int argc, const char *argv[]) {
 
@@ -52,8 +32,12 @@ int main(int argc, const char *argv[]) {
 	journal.add_entry("cpp");
 	journal.add_entry("ssh");
 	journal.add_entry("scp");
+	journal.add_entry("fd");
+	journal.add_entry("ripgrep");
 
 	journal.print_entries();
+
+	PersistanceManager::save(journal, "journal.log");
 
   return 0;
 }
