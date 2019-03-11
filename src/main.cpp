@@ -39,7 +39,7 @@ struct Journal {
   }
 
   void print_entries() {
-	  for (const std::string entry : entries) {
+	  for (const std::string &entry : entries) {
 		  std::cout << entry << '\n';
 	  }
   }

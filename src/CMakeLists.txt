@@ -31,5 +31,5 @@ endif ()
 
 # Linux specific.
 if (UNIX AND NOT APPLE)
-	target_link_libraries(ExecutableName pthread dl)
+	target_link_libraries(patterns pthread dl)
 endif ()
