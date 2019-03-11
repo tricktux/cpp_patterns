@@ -31,15 +31,29 @@ struct Journal {
   }
 
   void add_entry(const std::string &entry) {
+	  if (entry.empty())
+		  return;
+
 	  static int count = 1;
 	  entries.push_back(std::to_string(count++) + ": " + entry);
+  }
+
+  void print_entries() {
+	  for (const std::string entry : entries) {
+		  std::cout << entry << '\n';
+	  }
   }
 };
 
 int main(int argc, const char *argv[]) {
 
-  int count = 1;
+	Journal journal{"wiki"};
 
-  std::cout << "yours:" << yours << std::endl;
+	journal.add_entry("cpp");
+	journal.add_entry("ssh");
+	journal.add_entry("scp");
+
+	journal.print_entries();
+
   return 0;
 }

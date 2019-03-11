@@ -9,7 +9,7 @@
 cmake_minimum_required(VERSION 3.1)
 
 # Set ProjectName
-project(ProjectName)
+project(Patterns)
 
 option(USE_CLANG "build application with clang" ON) # ON is the default
 

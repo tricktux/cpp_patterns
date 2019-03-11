@@ -19,14 +19,14 @@ else ()
 endif ()
 
 # Set ExecutableName.
-add_executable(ExecutableName ${SOURCES})
+add_executable(patterns ${SOURCES})
 
 if (GLOG_FOUND)
-	target_link_libraries(ExecutableName ${GLOG_LIBRARIES})
+	target_link_libraries(patterns ${GLOG_LIBRARIES})
 endif ()
 
 if (APPLE)
-	target_link_libraries(ExecutableName "-framework Carbon")
+	target_link_libraries(patterns "-framework Carbon")
 endif ()
 
 # Linux specific.
