@@ -1,8 +1,8 @@
-/// @file main.cpp
-/// @brief Udemy C++ Patterns
+/// @file lesson1_journal.cpp
+/// @brief Notes and code from lesson 2
 /// @author Reinaldo Molina
 /// @version  0.0
-/// @date Mar 05 2019
+/// @date Mar 15 2019
 // Copyright © 2019 Reinaldo Molina
 
 // This program is free software: you can redistribute it and/or modify
@@ -16,16 +16,6 @@
 // GNU General Public License for more details.
 
 // You should have received a copy of the GNU General Public License
-// along with this program.  If not, see <http:www.gnu.org/licenses/>.
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#include <iostream>
-#include <string>
-#include <vector>
-#include <fstream>
 
-#include "less2_journal.hpp"
-
-int main(int argc, const char *argv[]) {
-
-  return 0;
-}
