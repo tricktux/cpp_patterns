@@ -1,5 +1,3 @@
-# All the source files for the bot.
-file(GLOB SOURCES "main.cpp")
 
 include_directories(${CMAKE_SOURCE_DIR}/inc)
 
@@ -15,14 +13,16 @@ endif ()
 if (MSVC)
     # FIXME: put Windows specific options here.
 else ()
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Werror")
 endif ()
 
 # Set ExecutableName.
-add_executable(patterns ${SOURCES})
+add_executable(patterns "main.cpp")
+add_executable(lesson2 "lesson2_journal.cpp")
 
 if (GLOG_FOUND)
 	target_link_libraries(patterns ${GLOG_LIBRARIES})
+	target_link_libraries(lesson2 ${GLOG_LIBRARIES})
 endif ()
 
 if (APPLE)

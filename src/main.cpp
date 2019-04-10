@@ -23,9 +23,9 @@
 #include <vector>
 #include <fstream>
 
-#include "less2_journal.hpp"
+#include "lesson2_journal.hpp"
 
-int main(int argc, const char *argv[]) {
+int main(int, const char **) {
 
   return 0;
 }
